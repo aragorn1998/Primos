@@ -33,7 +33,6 @@ def es_primo_miller_rabin(numero, k=5):
 
         # x = a^d mod numero. Si x es 1 o n-1, la ronda pasa inmediatamente.
         x = pow(a, d, numero)
-        print(a, x)
         if x == 1 or x == numero - 1:
             continue
 
@@ -42,7 +41,6 @@ def es_primo_miller_rabin(numero, k=5):
         # Para un primo, esta secuencia debe llegar a n-1 antes de terminar.
         for _ in range(r - 1):
             x = pow(x, 2, numero)
-            print(x)
             if x == numero - 1:
                 break
         else:
